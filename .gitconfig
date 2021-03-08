@@ -1,0 +1,41 @@
+[core]
+          autocrlf = true
+          editor = vim
+
+[user]
+          name = bsipiczki
+          email = ... .hu
+[merge]
+          tool = meld
+[mergetool]
+          prompt = false
+[diff]
+          tool = meld
+[difftool]
+          prompt = false
+[difftool "meld"]
+          path = /usr/bin/meld
+[mergetool "meld"]
+          path = /usr/bin/meld
+
+[alias]
+          co = checkout
+          aa = add .
+          ci = commit
+          cm = commit -m
+          st = status
+          br = branch
+          brd = branch -d
+          brD = branch -D
+          pod = push origin develop
+          pom = push origin master
+          pld = pull origin develop
+          plm = pull origin master
+          po = push origin
+          pl = pull origin
+          dt = difftool
+          mt = mergetool
+          cob = checkout -b
+          amend = commit --amend -m
+          ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+          ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat

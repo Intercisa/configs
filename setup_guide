@@ -1,0 +1,95 @@
+#zsh
+chsh -s $(which zsh)
+sudo apt-get install zsh-theme-powerlevel9k
+git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+
+#docker
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+sudo apt update
+apt-cache policy docker-ce
+docker-ce:
+  Installed: (none)
+  Candidate: 18.03.1~ce~3-0~ubuntu
+  Version table:
+     18.03.1~ce~3-0~ubuntu 500
+        500 https://download.docker.com/linux/ubuntu bionic/stable amd64 Packages
+#sudo apt-get update && sudo apt-get install docker-ce docker-ce-cli containerd.io -different install
+sudo apt install docker-ce
+sudo groupadd docker
+sudo usermod -aG docker ${USER}
+sudo usermod -aG docker $USER 
+
+
+#vim
+curl -flo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+sudo apt install python3-pip -y
+sudo apt install vim-gtk3 -y
+mkdir fonts
+#git clone https://github.com/ryanoasis/nerd-fonts.git
+cp /fonts/nerd-fonts ...
+cd /fonts/nerd-fonts
+# ./install.sh
+sudo apt-get install build-essential cmake
+sudo apt-get install python-dev python3-dev -y
+
+#git
+sudo apt install meld
+
+
+#ssh
+sudo chmod 600 /home/bsipiczki/.ssh/id_rsa
+ssh-add
+apt install sshpass
+
+#xmllint
+sudo apt install libxml2-utils
+
+#idea
+sudo snap install intellij-idea-ultimate --classic
+
+
+#sstp
+sudo add-apt-repository ppa:eivnaes/network-manager-sstp
+sudo apt install sstp-client network-manager-sstp
+#rewrite /etc/ssl/openssl.conf
+
+
+#tmux
+sudo apt install tmux
+
+#homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent/Homebrew/install/HEAD/install.sh)"
+#eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+brew install hugo
+hugo server -D
+
+#aeek 
+git clone ssh://git@10.64.0.77:2222/aek-developers/gyse-company-ui.git
+
+
+#keychron
+sudo vim /etc/systemd/system/keychron.service
+
+!!
+#paste in
+
+[Unit]
+Description=The command to make the Keychron K2 work
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash -c "echo 0 > /sys/module/hid_apple/parameters/fnmode"
+
+[Install]
+WantedBy=multi-user.target
+!!
+
+systemctl enable keychron
+reboot
+
+
+#other
+sudo apt-get install fzf
