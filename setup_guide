@@ -100,3 +100,4 @@ reboot
 
 #other
 sudo apt-get install fzf
+sudo snap install cheat
