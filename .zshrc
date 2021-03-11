@@ -137,7 +137,8 @@ alias ..4="cd ../../../.."
 alias ..5="cd ../../../../.."
 
 
-source /usr/share/powerlevel9k/powerlevel9k.zsh-theme
+# source /usr/share/powerlevel9k/powerlevel9k.zsh-theme
+source ~/powerlevel10k/powerlevel10k.zsh-theme
 export PATH="$(systemd-path user-binaries):$PATH"
 
 zle     -N   fzf-history-widget
