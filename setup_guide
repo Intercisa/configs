@@ -101,3 +101,7 @@ reboot
 #other
 sudo apt-get install fzf
 sudo snap install cheat
+
+#timezone setting
+sudo apt install chrony
+sudo chronyd -q
