@@ -105,3 +105,4 @@ sudo snap install cheat
 #timezone setting
 sudo apt install chrony
 sudo chronyd -q
+# https://github.com/ibraheemdev/modern-unix
